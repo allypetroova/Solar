@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Solar</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -63,7 +62,7 @@
       <h2 class="title">
         УСЛУГИ
       </h2>
-      <div сlass="services__inner">
+      <div сlass="services__inner" style="display: flex;">
         <div class="services__content">
           <div class="services__box">
             <h4 class="services__box-title">
@@ -104,18 +103,18 @@
   </section>
 
   <section class="info">
-    <dic class="container">
+    <div class="container">
       <h2 class="title">Зеленый тариф</h2>
       <div class="info__inner">
         <div class="info__box">
           <div class="info-tabs">
             <div class="info-tabs__items">
-              <a class="info-tabs__item" href="#tab-1">продажа</a>
+              <a class="info-tabs__item info-tabs__item--active" href="#tab-1">продажа</a>
               <a class="info-tabs__item" href="#tab-2">закрепление</a>
               <a class="info-tabs__item" href="#tab-3">ограничения</a>
             </div>
             <div class="info-tabs__contentbox">
-              <div class="info-tabs__content" id="tab-1">
+              <div class="info-tabs__content info-tabs__content--active" id="tab-1">
                 <div class="info-slider">
                   <div class="info-slider__item">
                     <img class="info-slider__img" src="images/slider.jpg" alt="">
@@ -185,7 +184,7 @@
           <img class="info__content-img" src="images/info.jpg" alt="">
         </div>
       </div>
-    </dic>
+    </div>
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
