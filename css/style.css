@@ -289,4 +289,114 @@ ul{
     fill: #A9A32A;
 }
 
-/*----------clients----------*/
+/*----------step----------*/
+
+.step{
+    margin-bottom: 150px;
+}
+
+.step__img{
+    flex-basis: 600px;
+    object-fit: cover;
+}
+
+.step__content{
+    flex-basis: 510px;
+    margin-right: 90px;
+}
+
+.step__list{
+    list-style: none;
+    counter-reset: number;
+}
+
+.step__list-item{
+    counter-increment: number;
+    margin-bottom: 30px;
+}
+
+.step__list-item::before{
+    content: '0' counter(number);
+    margin-bottom: 11px;
+    color: #868585;
+}
+
+.step__list-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 2px;
+}
+
+/*----------footer----------*/
+
+.footer{
+    background-image: url(../images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0px 50px;
+    color: #fff;
+}
+
+.footer__top{
+    display: flex;
+    margin-bottom: 150px
+}
+
+.footer__form{
+    flex-basis: 510px;
+    margin-right: 90px;
+}
+
+.footer__title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 43px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.footer__input{
+    border: none;
+    border-bottom: 1px solid #fff;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 11px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+    margin-bottom: 60px;
+}
+ 
+.footer__input::placeholder{                      /*Это для того чтобы текст не изменялся на базовый в поле при вводе*/
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+}
+
+.footer__form-btn{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #fff;
+}
+
+.footer__contacts-item{
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.footer__buttom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .social{
+    margin-right: -10px;
+}
