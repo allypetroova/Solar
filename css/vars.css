@@ -1,0 +1,13 @@
+:root {
+    --text-color: #303030;
+    --title-muted: #868585;
+
+    --header-text-color: #ffffff;
+    --ui-yellow: #A9A32A;
+
+    --blockquote-text-color: #ffffff;
+
+    --footer-text-color: #ffffff;
+
+    --font-main: 'Noto Sans', sans-serif;
+}
