@@ -9,10 +9,6 @@ body{
     color: var(--text-color);
 }
 
-.none{
-    display: none;
-}
-
 a{
     color: inherit;
 }
@@ -156,7 +152,7 @@ a{
 .info__inner{
     display: flex;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         flex-wrap: wrap-reverse;
     }
 }
@@ -165,7 +161,7 @@ a{
     flex-basis: 510px;
     margin-right: 90px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         flex-basis: 100%;
         margin-right: 0;
         display: flex;
@@ -179,7 +175,7 @@ a{
 .info__content{
     flex-basis: 600px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         flex-basis: 100%;
     }
 }
@@ -192,7 +188,7 @@ a{
 }
 
 .info__content-img{
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         display: none;
     }
 }
@@ -200,7 +196,7 @@ a{
 .info-tabs{
     margin-bottom: 100px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         margin-bottom: 40px;
     }
 }
@@ -208,7 +204,7 @@ a{
 .info-tabs__items{
     margin-bottom: 120px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         margin-bottom: 40px;
     }
 
@@ -307,7 +303,7 @@ a{
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         align-self: start;
         margin-left: 40px;
     }
@@ -343,13 +339,17 @@ a{
     background-position: center;
     background-size: cover;
     margin-bottom: 150px;
+
+    @media (max-width: 768px) {
+        padding: 60px 10px 80px;
+    }
 }
 
 .blockquote__text{
     max-width: 670px;
     margin: 0 auto;
-    font-size: 42px;
-    line-height: 57px;
+    font-size: clamp(22px, 0.182rem + 5.09vw, 42px);
+    line-height: clamp(28px, 0.021rem + 7.38vw, 57px);
     color: var(--blockquote-text-color);
 }
 
@@ -361,12 +361,23 @@ a{
 
 .clients-slider__box{
     display: flex;
+
+    @media (max-width: 960px) {
+        display: block;
+    }
 }
 
 .clients-slider__box-img{
     flex-basis: 510px;
     margin-right: 90px;
     margin-bottom: 30px;
+
+    @media (max-width: 960px) {
+        margin-right: 0;
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+    }
 }
 
 .clients-slider__box-title{
@@ -375,11 +386,19 @@ a{
     line-height: 25px;
     font-weight: 700;
     margin-bottom: 30px;
+
+    @media (max-width: 960px) {
+        max-width: 100%
+    }
 }
 
 .clients-slider__box-list{
     margin-left: 50px;
     margin-bottom: 50px;
+
+    @media (max-width: 540px) {
+        margin-left: 0;
+    }
 }
 
 .clients-slider__box-item{
@@ -400,14 +419,33 @@ a{
     margin-bottom: 150px;
 }
 
+.step__inner{
+    display: flex;
+
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+    }
+}
+
 .step__img{
     flex-basis: 600px;
     object-fit: cover;
+
+    @media (max-width: 1024px) {
+        height: 400px;
+        width: 100%;
+        flex-basis: 100%;
+    }
 }
 
 .step__content{
     flex-basis: 510px;
     margin-right: 90px;
+
+    @media (max-width: 1024px) {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
 }
 
 .step__list{
@@ -446,12 +484,21 @@ a{
 
 .footer__top{
     display: flex;
-    margin-bottom: 150px
+    margin-bottom: clamp(70px, -7.467rem + 35.09vw, 150px);
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 }
 
 .footer__form{
     flex-basis: 510px;
     margin-right: 90px;
+
+    @media (max-width: 768px) {
+        flex-basis: 100%;
+        margin: 0 0 50px 0;
+    }
 }
 
 .footer__title{
@@ -459,7 +506,7 @@ a{
     font-size: 24px;
     line-height: 43px;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: clamp(30px, -2.566rem + 13.16vw, 60px);
 }
 
 .footer__input{
@@ -477,7 +524,7 @@ a{
 }
  
 .footer__input::placeholder{                      /*Для того чтобы текст не изменялся на базовый в поле при вводе*/
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(--font-main);
     font-size: 14px;
     line-height: 19px;
     color: var(--footer-text-color);
@@ -490,6 +537,13 @@ a{
     color: var(--footer-text-color);
 }
 
+.footer__contacts{
+    @media (max-width: 768px) {
+        text-align: center;
+        width: 100%;
+    }
+}
+
 .footer__contacts-item{
     font-size: 18px;
     line-height: 25px;
@@ -500,6 +554,19 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.footer__buttom .logo{
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
 }
 
 .footer .social{
